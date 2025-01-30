@@ -27,7 +27,7 @@
                               <div class="flex-1 h-full max-w-4xl p-3 mx-auto bg-white rounded-lg shadow-xl dark:bg-gray-800 pb-2" style="max-height: 600px;overflow:scroll;">
                                   
                                   <p>
-                                      <strong>SoilSmart :</strong> is an innovative platform designed to empower farmers with data-driven decisions to maximize crop yields. 
+                                      <strong>Smart-Soil :</strong> is an innovative platform designed to empower farmers with data-driven decisions to maximize crop yields. 
                                       It utilizes <strong>machine learning algorithms</strong> to analyze soil data and predict the most suitable crops for specific soil conditions. 
                                       By integrating <strong>Arduino-based IoT devices</strong>, SoilSmart collects real-time data such as soil pH, temperature, moisture levels, and nutrient composition. 
                                       This data is then sent to a centralized <strong>API</strong> where advanced machine learning models process it and provide predictions and recommendations 

@@ -12,7 +12,7 @@
                   height="40"
                 />
               
-                &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;font-style: italic;">Soil_Smart</router-link>
+                &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;font-style: italic;">Smart-Soil</router-link>
         </div>
       </nav>
 
