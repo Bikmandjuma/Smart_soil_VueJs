@@ -43,7 +43,6 @@
               <a href="/Manager/job_category" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
             </div>
           </div>
-
           
         </nav>
       </div>
@@ -72,7 +71,7 @@
               height="40"
             />
           
-            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">Smart-Soil</router-link>
+            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">IoT and AI-Driven Crop Recommendation System</router-link>
           </div>
           <!-- <div>
             <form action="#">
