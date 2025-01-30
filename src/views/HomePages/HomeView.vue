@@ -57,7 +57,7 @@
                                       while fostering sustainable farming practices.
                                   </p> -->
 
-                                  <h4>IoT and AI-Driven Crop Recommendation System</h4>
+                                  <!-- <h4>IoT and AI-Driven Crop Recommendation System</h4> -->
     
                                     <p>Agriculture is a critical sector that requires innovative solutions to overcome challenges such as unpredictable weather patterns, inefficient resource management, and poor crop selection. This project introduces an IoT and AI-Driven Crop Recommendation System, designed to assist farmers in making data-driven decisions to enhance productivity, sustainability, and economic viability.</p>
                                     
