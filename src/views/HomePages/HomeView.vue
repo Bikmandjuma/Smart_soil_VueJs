@@ -29,8 +29,8 @@
                                   <h4>IoT and AI-Driven Crop Recommendation System</h4>
     
                                     <p>Agriculture is a critical sector that requires innovative solutions to overcome challenges such as unpredictable weather patterns, inefficient resource management, and poor crop selection. This project introduces an IoT and AI-Driven Crop Recommendation System, designed to assist farmers in making data-driven decisions to enhance productivity, sustainability, and economic viability.</p>
-                                    
-                                    <h6>Key Features</h6>
+                                    <br>
+                                    <h4>Key Features</h4>
                                     <ul style="list-style-type:square;">
                                         <li><strong>Real-time Data Collection:</strong> IoT-enabled sensors monitor environmental factors like soil moisture, temperature, humidity, and pH levels.</li>
                                         <li><strong>Cloud-Based Data Processing:</strong> Secure storage and processing of real-time and historical data to ensure accessibility and efficient analysis.</li>
@@ -39,65 +39,65 @@
                                         <li><strong>Predictive Analysis:</strong> AI algorithms forecast weather trends and potential agricultural risks.</li>
                                         <li><strong>Sustainability & Resource Optimization:</strong> Reduces water wastage, promotes eco-friendly practices, and minimizes financial losses.</li>
                                     </ul>
-                                    
-                                    <h6>How It Works</h6>
+                                    <br>
+                                    <h4>How It Works</h4>
                                     <ol style="list-style-type:square;">
                                         <li><strong>Data Collection:</strong> IoT sensors placed in agricultural fields gather data on soil health and environmental conditions.</li>
                                         <li><strong>Data Transmission:</strong> The collected data is sent to a cloud platform via wireless communication protocols.</li>
                                         <li><strong>AI Analysis:</strong> Machine learning models process the data, comparing it with historical records and market trends to generate crop recommendations.</li>
                                         <li><strong>Decision Support:</strong> Farmers receive real-time insights through an interactive web or mobile interface, helping them make informed decisions.</li>
                                     </ol>
-                                    
-                                    <h6>Why Choose This System?</h6>
+                                    <br>
+                                    <h4>Why Choose This System?</h4>
                                     <ul style="list-style-type:square;">
                                         <li><strong>Enhanced Precision Farming:</strong> Data-driven decision-making ensures better yields and efficient resource usage.</li>
                                         <li><strong>Adaptation to Climate Change:</strong> AI-powered recommendations help mitigate risks associated with unpredictable weather patterns.</li>
                                         <li><strong>Economic Growth:</strong> Increases profitability by suggesting the most viable crops based on market demand.</li>
                                         <li><strong>Government Policy Alignment:</strong> Supports Rwanda’s Vision 2050 for agricultural modernization.</li>
                                     </ul>
-                                    
-                                    <h6>Target Users</h6>
+                                    <br>
+                                    <h4>Target Users</h4>
                                     <ul style="list-style-type:square;">
                                         <li>Smallholder and large-scale farmers</li>
                                         <li>Agricultural policymakers and government institutions (e.g., MINAGRI Rwanda)</li>
                                         <li>Research institutions focused on agricultural innovation</li>
                                     </ul>
-                                    
-                                    <h6>Technical Aspects</h6>
+                                    <br>
+                                    <h4>Technical Aspects</h4>
                                     <h7>IoT Sensors Used:</h7>
                                     <ul style="list-style-type:square;">
                                         <li>Soil moisture sensors</li>
                                         <li>Temperature and humidity sensors</li>
                                         <li>pH level sensors</li>
                                     </ul>
-                                    
-                                    <h6>AI Models Implemented:</h6>
+                                    <br>
+                                    <h4>AI Models Implemented:</h4>
                                     <ul style="list-style-type:square;">
                                         <li>Decision Trees</li>
                                         <li>Random Forest</li>
                                         <li>Support Vector Machines (SVM)</li>
                                     </ul>
-                                    
-                                    <h6>Cloud Technologies:</h6>
+                                    <br>
+                                    <h4>Cloud Technologies:</h4>
                                     <ul style="list-style-type:square;">
                                         <li>AWS/Azure/Google Cloud for data storage</li>
                                         <li>Firebase for real-time database management</li>
                                     </ul>
-                                    
-                                    <h6>User Interface:</h6>
+                                    <br>
+                                    <h4>User Interface:</h4>
                                     <ul style="list-style-type:square;">
                                         <li>Web-based dashboard (VueJS , flask and Laravel)</li>
                                         <li>Mobile application (Android/iOS)</li>
                                     </ul>
-                                    
-                                    <h6>Expected Impact</h6>
+                                    <br>
+                                    <h4>Expected Impact</h4>
                                     <ul style="list-style-type:square;">
                                         <li>Improved agricultural productivity and food security.</li>
                                         <li>Reduction of farming costs by optimizing resource allocation.</li>
                                         <li>Increased farmer incomes through better crop choices.</li>
                                         <li>Promotion of sustainable farming practices in Rwanda and beyond.</li>
                                     </ul>
-
+                                    <br>
                                   <p class="text-center items-center justify-center">---- End ----</p>
   
                               </div>
