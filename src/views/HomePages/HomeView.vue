@@ -26,7 +26,7 @@
                              
                               <div class="flex-1 h-full max-w-4xl p-3 mx-auto bg-white rounded-lg shadow-xl dark:bg-gray-800 pb-2" style="max-height: 600px;overflow:scroll;">
                                   
-                                  <p>
+                                  <!-- <p>
                                       <strong>Smart-Soil :</strong> is an innovative platform designed to empower farmers with data-driven decisions to maximize crop yields. 
                                       It utilizes <strong>machine learning algorithms</strong> to analyze soil data and predict the most suitable crops for specific soil conditions. 
                                       By integrating <strong>Arduino-based IoT devices</strong>, SoilSmart collects real-time data such as soil pH, temperature, moisture levels, and nutrient composition. 
@@ -55,7 +55,79 @@
                                   <p>
                                       SoilSmart aims to revolutionize agriculture by combining <strong>IoT and AI technologies</strong> to address global food security challenges 
                                       while fostering sustainable farming practices.
-                                  </p>
+                                  </p> -->
+
+                                  <h4>IoT and AI-Driven Crop Recommendation System</h4>
+    
+                                    <p>Agriculture is a critical sector that requires innovative solutions to overcome challenges such as unpredictable weather patterns, inefficient resource management, and poor crop selection. This project introduces an IoT and AI-Driven Crop Recommendation System, designed to assist farmers in making data-driven decisions to enhance productivity, sustainability, and economic viability.</p>
+                                    
+                                    <h6>Key Features</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li><strong>Real-time Data Collection:</strong> IoT-enabled sensors monitor environmental factors like soil moisture, temperature, humidity, and pH levels.</li>
+                                        <li><strong>Cloud-Based Data Processing:</strong> Secure storage and processing of real-time and historical data to ensure accessibility and efficient analysis.</li>
+                                        <li><strong>AI-Powered Crop Recommendation:</strong> Machine learning models analyze collected data and provide optimal crop suggestions tailored to specific soil and climate conditions.</li>
+                                        <li><strong>User-Friendly Interface:</strong> Mobile and web applications provide intuitive dashboards displaying actionable insights.</li>
+                                        <li><strong>Predictive Analysis:</strong> AI algorithms forecast weather trends and potential agricultural risks.</li>
+                                        <li><strong>Sustainability & Resource Optimization:</strong> Reduces water wastage, promotes eco-friendly practices, and minimizes financial losses.</li>
+                                    </ul>
+                                    
+                                    <h6>How It Works</h6>
+                                    <ol style="list-style-type:square;">
+                                        <li><strong>Data Collection:</strong> IoT sensors placed in agricultural fields gather data on soil health and environmental conditions.</li>
+                                        <li><strong>Data Transmission:</strong> The collected data is sent to a cloud platform via wireless communication protocols.</li>
+                                        <li><strong>AI Analysis:</strong> Machine learning models process the data, comparing it with historical records and market trends to generate crop recommendations.</li>
+                                        <li><strong>Decision Support:</strong> Farmers receive real-time insights through an interactive web or mobile interface, helping them make informed decisions.</li>
+                                    </ol>
+                                    
+                                    <h6>Why Choose This System?</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li><strong>Enhanced Precision Farming:</strong> Data-driven decision-making ensures better yields and efficient resource usage.</li>
+                                        <li><strong>Adaptation to Climate Change:</strong> AI-powered recommendations help mitigate risks associated with unpredictable weather patterns.</li>
+                                        <li><strong>Economic Growth:</strong> Increases profitability by suggesting the most viable crops based on market demand.</li>
+                                        <li><strong>Government Policy Alignment:</strong> Supports Rwanda’s Vision 2050 for agricultural modernization.</li>
+                                    </ul>
+                                    
+                                    <h6>Target Users</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li>Smallholder and large-scale farmers</li>
+                                        <li>Agricultural policymakers and government institutions (e.g., MINAGRI Rwanda)</li>
+                                        <li>Research institutions focused on agricultural innovation</li>
+                                    </ul>
+                                    
+                                    <h6>Technical Aspects</h6>
+                                    <h7>IoT Sensors Used:</h7>
+                                    <ul style="list-style-type:square;">
+                                        <li>Soil moisture sensors</li>
+                                        <li>Temperature and humidity sensors</li>
+                                        <li>pH level sensors</li>
+                                    </ul>
+                                    
+                                    <h6>AI Models Implemented:</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li>Decision Trees</li>
+                                        <li>Random Forest</li>
+                                        <li>Support Vector Machines (SVM)</li>
+                                    </ul>
+                                    
+                                    <h6>Cloud Technologies:</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li>AWS/Azure/Google Cloud for data storage</li>
+                                        <li>Firebase for real-time database management</li>
+                                    </ul>
+                                    
+                                    <h6>User Interface:</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li>Web-based dashboard (VueJS , flask and Laravel)</li>
+                                        <li>Mobile application (Android/iOS)</li>
+                                    </ul>
+                                    
+                                    <h6>Expected Impact</h6>
+                                    <ul style="list-style-type:square;">
+                                        <li>Improved agricultural productivity and food security.</li>
+                                        <li>Reduction of farming costs by optimizing resource allocation.</li>
+                                        <li>Increased farmer incomes through better crop choices.</li>
+                                        <li>Promotion of sustainable farming practices in Rwanda and beyond.</li>
+                                    </ul>
 
                                   <p class="text-center items-center justify-center">---- End ----</p>
   

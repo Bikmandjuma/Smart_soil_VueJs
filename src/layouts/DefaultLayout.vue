@@ -12,7 +12,8 @@
             height="40"
           />
           <!-- <div id="title_name"-->
-            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;font-style: italic;">Smart-Soil</router-link>
+            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;font-style: italic;">IoT and AI-Driven Crop Recommendation System</router-link>
+
             <!-- &nbsp;&nbsp;<span class="text-red-400 mt-1">Soil</span>&nbsp;<span class="text-purple-900 mt-1">Smart</span> -->
           <!--/div> -->
         
