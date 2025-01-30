@@ -26,38 +26,7 @@
                              
                               <div class="flex-1 h-full max-w-4xl p-3 mx-auto bg-white rounded-lg shadow-xl dark:bg-gray-800 pb-2" style="max-height: 600px;overflow:scroll;">
                                   
-                                  <!-- <p>
-                                      <strong>Smart-Soil :</strong> is an innovative platform designed to empower farmers with data-driven decisions to maximize crop yields. 
-                                      It utilizes <strong>machine learning algorithms</strong> to analyze soil data and predict the most suitable crops for specific soil conditions. 
-                                      By integrating <strong>Arduino-based IoT devices</strong>, SoilSmart collects real-time data such as soil pH, temperature, moisture levels, and nutrient composition. 
-                                      This data is then sent to a centralized <strong>API</strong> where advanced machine learning models process it and provide predictions and recommendations 
-                                      on the optimal crops to plant.
-                                  </p>
-  
-                                  <h6>Key Features</h6>
-                                  <ul>
-                                      <li><strong>Real-Time Data Collection:</strong> Arduino devices equipped with sensors continuously monitor soil conditions.</li>
-                                      <li><strong>API Integration:</strong> Collected data is securely transmitted to the SoilSmart platform via APIs for processing.</li>
-                                      <li><strong>Machine Learning Predictions:</strong> AI models analyze the soil data and predict suitable crops based on historical data, soil science, and weather patterns.</li>
-                                      <li><strong>User-Friendly Dashboard:</strong> Farmers can access recommendations and reports through an intuitive interface on web or mobile devices.</li>
-                                      <li><strong>Scalability:</strong> Supports small-scale and large-scale farming by customizing predictions based on specific needs.</li>
-                                  </ul>
-  
-                                  <h6>Benefits</h6>
-                                  <ul>
-                                      <li>Optimized crop yields through precise recommendations.</li>
-                                      <li>Reduction in resource waste (e.g., water, fertilizers).</li>
-                                      <li>Enhanced soil health by planting compatible crops.</li>
-                                      <li>Improved decision-making for farmers, promoting sustainable agriculture.</li>
-                                  </ul>
-  
-                                  <h6>Vision</h6>
-                                  <p>
-                                      SoilSmart aims to revolutionize agriculture by combining <strong>IoT and AI technologies</strong> to address global food security challenges 
-                                      while fostering sustainable farming practices.
-                                  </p> -->
-
-                                  <!-- <h4>IoT and AI-Driven Crop Recommendation System</h4> -->
+                                  <h4>IoT and AI-Driven Crop Recommendation System</h4>
     
                                     <p>Agriculture is a critical sector that requires innovative solutions to overcome challenges such as unpredictable weather patterns, inefficient resource management, and poor crop selection. This project introduces an IoT and AI-Driven Crop Recommendation System, designed to assist farmers in making data-driven decisions to enhance productivity, sustainability, and economic viability.</p>
                                     
@@ -153,6 +122,11 @@
   </script>
   
   <style scoped>
+  h4, h6 {
+    font-family: sa;
+    font-weight: bold;
+    /* Other styles */
+  }
   
       /* #ad_title{
           color: #E81C2E;
