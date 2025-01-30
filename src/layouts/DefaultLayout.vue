@@ -19,14 +19,14 @@
         </a>
         <div class="hidden md:flex space-x-6">
           
-          <router-link to="/" :class="{'active-link': $route.path === '/'}" class="text-gray-600 hover:text-blue-500"><i class="fa fa-list-alt mr-2"></i>About system</router-link>
-          <router-link
-            to="/login"
+          <a href="/" :class="{'active-link': $route.path === '/'}" class="text-gray-600 hover:text-blue-500"><i class="fa fa-list-alt mr-2"></i>About system</a>
+          <a
+            href="/login"
             :class="{'active-link': $route.path === '/login'}"
             class="text-gray-600 hover:text-blue-500"
           >
             <i class="fa fa-lock-open mr-2"></i>Login
-          </router-link>
+          </a>
          
         </div>
         <button
