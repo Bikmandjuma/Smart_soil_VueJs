@@ -1,0 +1,89 @@
+<template>
+  <div>
+    <!-- Content -->
+    <div class="mt-2">
+      <!-- State cards -->
+      <div class="grid grid-cols-1 gap-8 p-4 lg:grid-cols-2 xl:grid-cols-4">
+        <!-- Value card -->
+      
+        <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+          <div>
+            <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              pH
+            </h6>
+            <span class="text-xl font-semibold">0</span>
+          </div>
+          <div>
+            <span class="fa fa-list-alt w-11 h-11 text-gray-300 dark:text-primary-dark"></span>
+          </div>
+        </div>
+
+        <!-- Users card -->
+        <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+          <div>
+            <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              Temperature
+            </h6>
+            <span class="text-xl font-semibold">0</span>
+          </div>
+          <div>
+            <span class="fa fa-briefcase w-11 h-11 text-gray-300 dark:text-primary-dark"></span>
+          </div>
+        </div>
+
+        <!-- Orders card -->
+        <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+          <div>
+            <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              moisture levels
+            </h6>
+            <span class="text-xl font-semibold">0</span>
+          </div>
+          <div>
+            <span class="fa fa-list-alt w-11 h-11 text-gray-300 dark:text-primary-dark"></span>
+          </div>
+        </div>
+
+        <!-- Tickets card -->
+        <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
+          <div>
+            <h6 class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+              nutrient composition
+            </h6>
+            <!-- <span class="text-xl font-semibold" v-if="totalJobPositions.length > 0">{{ totalJobPositions }}</span> -->
+            <span class="text-xl font-semibold">0</span>
+          </div>
+          <div>
+            <span class="fa fa-briefcase w-11 h-11 text-gray-300 dark:text-primary-dark"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center items-center justify-center">
+        <!-- Pie Chart -->
+        <div>
+         Crops will be displayed here
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'ManagerDashboard',
+    data() {
+      return {
+      
+      };
+    },
+    beforeMount() {
+      const token = localStorage.getItem('auth_token');
+      if (!token) {
+        this.$router.push({ name: 'Login' });
+      }
+    },
+  };
+</script>

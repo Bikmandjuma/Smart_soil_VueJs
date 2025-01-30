@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "esnext",           // Use "esnext" for dynamic imports
+    "target": "esnext",           // Set target to ESNext
+    "moduleResolution": "node",   // Resolve modules using Node.js rules
+    "allowJs": true,              // Allow JavaScript files
+    "checkJs": true               // Enable JS checking (optional)
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
