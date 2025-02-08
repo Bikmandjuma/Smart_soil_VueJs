@@ -10,7 +10,7 @@ import AdminDashboard from '../views/Admin/AdminDashboard.vue';
 import ManagerDashboard from '../views/Manager/ManagerDashboard.vue';
 import ManagerInformation from '../views/Manager/ManagerInformation.vue';
 import ManagerProfile from '../views/Manager/ManagerProfile.vue';
-import JobCategory from '../views/Manager/ManagerJobCategory.vue';
+import FetchCrops from '../views/Manager/ManagerFetchCrops.vue';
 import ManagerPassword from '../views/Manager/ManagerPassword.vue';
 import ManagerUpdateInfo from '../views/Manager/ManagerUpdateInfo.vue';
 import ManagerResetCodePassword from '../views/Auth/CodeToResetPassword.vue';
@@ -72,13 +72,13 @@ const routes = [
   },
 
   {
-    path: '/Manager/job_category',
-    name: 'JobCategory',
-    component: JobCategory,
+    path: '/Manager/fetch_crops',
+    name: 'FetchCrops',
+    component: FetchCrops,
     meta: { 
       layout: ManagerLayout  ,
       requiresAuth : true,
-      pageTitle: "Job_category" },
+      pageTitle: "display crop's dataset" },
   },
   {
     path: '/Manager/updateInfo',

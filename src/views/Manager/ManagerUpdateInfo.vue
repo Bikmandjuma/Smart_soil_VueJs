@@ -5,13 +5,13 @@
         <div class="flex flex-wrap m-2">
           <!-- User Info Edit Form -->
           <div class="w-full xl:w-1/4 mb-4">
-            <div class="card border rounded-lg shadow-md">
+            <!-- <div class="card border rounded-lg shadow-md">
                 <div class="card-body p-4">
                 <div class="text-center">
                     <img 
                     style="border: 1px solid gray;"
                     class="rounded-full w-32 h-32 mx-auto"
-                    :src="userData.image ? require(`../../assets/Manager_style/images/${userData.image}`) : require('../../assets/Manager_style/images/user.png')"
+                    :src="require('../../assets/Manager_style/images/user.png')"
                     alt="User Image"
                     />
                     <router-link to="/Manager/profile"> 
@@ -27,7 +27,6 @@
                     {{ noCategoriesMessage }}
                     </router-link>
 
-                    <!-- Job Data Categories with More/Less Toggle -->
                     <p v-else style="max-height: 160px;overflow: auto;">
                     <span v-if="jobDataCategories.length > 80">
                         {{ isExpanded ? jobDataCategories : jobDataCategories.slice(0, 80) }}...
@@ -45,7 +44,7 @@
 
                 </div>
                 </div>
-            </div>
+            </div> -->
           </div>
             
           <div class="card border rounded-lg shadow-md">
@@ -180,7 +179,7 @@
     </div>
   </template>
   
-  <script>
+<script>
 import axios from 'axios';
 import { laravelApiUrl } from '../../api';
 

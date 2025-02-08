@@ -40,7 +40,7 @@
               <span class="ml-2 text-sm text-white">Crops</span>
             </a>
             <div v-show="open.jobs" class="mt-2 space-y-2 px-7">
-              <a href="/Manager/job_category" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
+              <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
             </div>
           </div>
           
@@ -63,15 +63,15 @@
           </button>
 
           <div class="flex">
-            <img
+            <!-- <img
               aria-hidden="true"
               class="object-cover dark:hidden"
               src="../assets/Homepage_images/carousel5.jpg"
               width="40"
               height="40"
-            />
+            /> -->
           
-            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">IoT and AI-Driven Crop Recommendation System</router-link>
+            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">IoT and AI-Driven CRS</router-link>
           </div>
           <!-- <div>
             <form action="#">
@@ -93,7 +93,7 @@
                 <img 
                   style="border: 2px solid gray;"
                   class="rounded-full w-10 h-10 mx-auto"
-                  :src="userData.image ? require(`../assets/Manager_style/images/${userData.image}`) : require('../assets/Manager_style/images/user.png')"
+                  :src="require('../assets/Manager_style/images/user.png')"
                   alt="User Image"
                 />
               </button>
@@ -106,7 +106,7 @@
               >
                 <a href="/Manager/information" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary"><i class="fa fa-list-alt"></i>&nbsp;Info</a>
                 <a href="/Manager/password" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary"><i class="fa fa-key"></i>&nbsp;Password</a>
-                <a href="/Manager/profile" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary"><i class="fa fa-image"></i>&nbsp;Profile</a>
+                <!-- <a href="/Manager/profile" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary"><i class="fa fa-image"></i>&nbsp;Profile</a> -->
                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-primary openModal" @click="openModal"><i class="fa fa-lock"></i>&nbsp;Logout</a>
               </div>
             
@@ -164,7 +164,7 @@
           <span class="ml-2 text-sm text-white">Crops</span>
         </a>
         <div v-show="open.jobs" class="mt-2 space-y-2 px-7">
-          <a href="/Manager/job_category" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
+          <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
         </div>
 
       </div>

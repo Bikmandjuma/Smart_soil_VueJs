@@ -5,13 +5,13 @@
       <div class="flex flex-wrap m-2">
         <!-- Left Section (User Name and Image) -->
         <div class="w-full xl:w-1/4 mb-4">
-          <div class="card border rounded-lg shadow-md">
+          <!-- <div class="card border rounded-lg shadow-md">
             <div class="card-body p-4">
               <div class="text-center">
                 <img 
                   style="border: 1px solid gray;"
                   class="rounded-full w-32 h-32 mx-auto"
-                  :src="userData.image ? require(`../../assets/Manager_style/images/${userData.image}`) : require('../../assets/Manager_style/images/user.png')"
+                  :src="require('../../assets/Manager_style/images/user.png')"
                   alt="User Image"
                 />
                 <router-link to="/Manager/profile" class="bg-primary" id="edit_pen"> 
@@ -21,7 +21,7 @@
 
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Right Section (User Details) -->

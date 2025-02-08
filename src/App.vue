@@ -1,6 +1,6 @@
 <template>
   <component :is="layout">
-    <router-view></router-view>  <!-- Inject child component here -->
+    <router-view></router-view>
   </component>
 </template>
 
@@ -11,7 +11,6 @@ import DefaultLayout from './layouts/DefaultLayout.vue';
 export default defineComponent({
   computed: {
     layout() {
-      // Check the current route and return the appropriate layout
       const layout = this.$route.meta.layout || DefaultLayout;
       return layout;
     }
