@@ -40,7 +40,7 @@
               <span class="ml-2 text-sm text-white">Crops</span>
             </a>
             <div v-show="open.jobs" class="mt-2 space-y-2 px-7">
-              <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
+              <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Crop's dataset</a>
             </div>
           </div>
           
@@ -118,12 +118,20 @@
       <main class="flex-grow">
             <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
               <h1 class="text-2xl font-semibold">{{ pageTitle }}</h1>
-              <!-- <a
-                href="/Manager/recommendation_job"
+              <a
+                v-if="$route.path === '/Manager/fetch_crops'"
+                href="/Manager/dataset_statistic"
                 class="px-4 py-2 text-sm text-white rounded-md bg-primary hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark"
               >
-                <i class="fa fa-bell"></i>&nbsp;Notification
-              </a> -->
+                <i class="fa fa-list-alt"></i>&nbsp;<b>Data Statistic</b>
+              </a>
+              <a
+                v-if="$route.path === '/Manager/dataset_statistic'"
+                href="/Manager/fetch_crops"
+                class="px-4 py-2 text-sm text-white rounded-md bg-primary hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark"
+              >
+                <i class="fa fa-list-alt"></i>&nbsp;<b>Dataset</b>
+              </a>
             </div>
 
         <slot></slot>

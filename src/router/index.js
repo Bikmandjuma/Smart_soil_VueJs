@@ -11,6 +11,7 @@ import ManagerDashboard from '../views/Manager/ManagerDashboard.vue';
 import ManagerInformation from '../views/Manager/ManagerInformation.vue';
 import ManagerProfile from '../views/Manager/ManagerProfile.vue';
 import FetchCrops from '../views/Manager/ManagerFetchCrops.vue';
+import DatasetStatistic from '../views/Manager/ManagerDatasetStatistic.vue';
 import ManagerPassword from '../views/Manager/ManagerPassword.vue';
 import ManagerUpdateInfo from '../views/Manager/ManagerUpdateInfo.vue';
 import ManagerResetCodePassword from '../views/Auth/CodeToResetPassword.vue';
@@ -78,7 +79,16 @@ const routes = [
     meta: { 
       layout: ManagerLayout  ,
       requiresAuth : true,
-      pageTitle: "Display crop's dataset" },
+      pageTitle: "Dataset" },
+  },
+  {
+    path: '/Manager/dataset_statistic',
+    name: 'DatasetStatistic',
+    component: DatasetStatistic,
+    meta: { 
+      layout: ManagerLayout  ,
+      requiresAuth : true,
+      pageTitle: "Statistic" },
   },
   {
     path: '/Manager/updateInfo',
