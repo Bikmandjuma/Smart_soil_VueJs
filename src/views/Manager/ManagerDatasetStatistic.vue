@@ -51,26 +51,31 @@
   </template>
   
   <script>
-  export default {
-    data() {
-      return {
-        statistics: {},
-      };
-    },
-    mounted() {
-      this.fetchStatistics();
-    },
-    methods: {
-      async fetchStatistics() {
-        try {
-          const response = await fetch("http://127.0.0.1:5000/api/statistics");
-          this.statistics = await response.json();
-        } catch (error) {
-          console.error("Error fetching statistics:", error);
-        }
-      },
-    },
-  };
+  
+    import { flaskApiUrl } from '../../api';
+
+    flaskApiUrl
+    export default {
+        data() {
+        return {
+            statistics: {},
+        };
+        },
+        mounted() {
+        this.fetchStatistics();
+        },
+        methods: {
+        async fetchStatistics() {
+            try {
+            const response = await fetch(`${flaskApiUrl}/statistics`);
+            this.statistics = await response.json();
+            } catch (error) {
+            console.error("Error fetching statistics:", error);
+            }
+        },
+        },
+    };
+  
   </script>
   
   <style scoped>

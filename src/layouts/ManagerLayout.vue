@@ -172,7 +172,7 @@
           <span class="ml-2 text-sm text-white">Crops</span>
         </a>
         <div v-show="open.jobs" class="mt-2 space-y-2 px-7">
-          <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Types of crops</a>
+          <a href="/Manager/fetch_crops" class="block p-2 text-sm text-gray-400 dark:text-gray-400 hover:text-white dark:hover:text-light">Crop's dataset</a>
         </div>
 
       </div>

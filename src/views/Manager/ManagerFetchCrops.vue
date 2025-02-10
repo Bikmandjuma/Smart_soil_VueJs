@@ -84,67 +84,71 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      // Search query
-      searchQuery: '',
-      // The dataset
-      dataset: [],
-      // Pagination control
-      currentPage: 1,
-      rowsPerPage: 10,
+    
+    import { flaskApiUrl } from '../../api';
+
+    export default {
+      data() {
+        return {
+          // Search query
+          searchQuery: '',
+          // The dataset
+          dataset: [],
+          // Pagination control
+          currentPage: 1,
+          rowsPerPage: 10,
+        };
+      },
+      computed: {
+        // Filtered data based on the search query
+        filteredData() {
+          const query = this.searchQuery.toLowerCase();
+          return this.dataset.filter((row) => {
+            return (
+              row.N.toString().includes(query) ||
+              row.P.toString().includes(query) ||
+              row.K.toString().includes(query) ||
+              row.ph.toString().includes(query) ||
+              row.label.toLowerCase().includes(query) ||
+              row.conductivity.toString().includes(query) ||
+              row.temperature.toString().includes(query) ||
+              row.soil_moisture.toString().includes(query)
+            );
+          });
+        },
+
+        // Paginated data based on current page and rows per page
+        paginatedData() {
+          const start = (this.currentPage - 1) * this.rowsPerPage;
+          const end = start + this.rowsPerPage;
+          return this.filteredData.slice(start, end);
+        },
+
+        // Total number of pages
+        totalPages() {
+          return Math.ceil(this.filteredData.length / this.rowsPerPage);
+        },
+      },
+      methods: {
+        // Change the current page
+        changePage(page) {
+          if (page < 1 || page > this.totalPages) return;
+          this.currentPage = page;
+        },
+      },
+      mounted() {
+        // Fetch the dataset when the component is mounted
+        fetch(`${flaskApiUrl}/get_dataset`)
+          .then((response) => response.json())
+          .then((data) => {
+            this.dataset = data; // Store the fetched data
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      },
     };
-  },
-  computed: {
-    // Filtered data based on the search query
-    filteredData() {
-      const query = this.searchQuery.toLowerCase();
-      return this.dataset.filter((row) => {
-        return (
-          row.N.toString().includes(query) ||
-          row.P.toString().includes(query) ||
-          row.K.toString().includes(query) ||
-          row.ph.toString().includes(query) ||
-          row.label.toLowerCase().includes(query) ||
-          row.conductivity.toString().includes(query) ||
-          row.temperature.toString().includes(query) ||
-          row.soil_moisture.toString().includes(query)
-        );
-      });
-    },
 
-    // Paginated data based on current page and rows per page
-    paginatedData() {
-      const start = (this.currentPage - 1) * this.rowsPerPage;
-      const end = start + this.rowsPerPage;
-      return this.filteredData.slice(start, end);
-    },
-
-    // Total number of pages
-    totalPages() {
-      return Math.ceil(this.filteredData.length / this.rowsPerPage);
-    },
-  },
-  methods: {
-    // Change the current page
-    changePage(page) {
-      if (page < 1 || page > this.totalPages) return;
-      this.currentPage = page;
-    },
-  },
-  mounted() {
-    // Fetch the dataset when the component is mounted
-    fetch('http://localhost:5000/api/get_dataset')
-      .then((response) => response.json())
-      .then((data) => {
-        this.dataset = data; // Store the fetched data
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  },
-};
 </script>
 
 <style scoped>
