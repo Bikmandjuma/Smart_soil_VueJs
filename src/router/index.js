@@ -78,7 +78,7 @@ const routes = [
     meta: { 
       layout: ManagerLayout  ,
       requiresAuth : true,
-      pageTitle: "display crop's dataset" },
+      pageTitle: "Display crop's dataset" },
   },
   {
     path: '/Manager/updateInfo',
