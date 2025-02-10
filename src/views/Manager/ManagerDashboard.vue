@@ -6,8 +6,8 @@
         <!-- Value card -->
       
         <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
-          <div>
-            <p class="text-xl font-medium leading-none tracking-wider text-gray-500 dark:text-primary-light">
+          <div class="text-center">
+            <p class="text-md font-medium leading-none tracking-wider text-gray-500 dark:text-primary-light">
               N,P,K,pH
             </p>
             <span class="text-xl font-semibold">0,0,0,0</span>
@@ -23,7 +23,7 @@
             <h6 class="text-xl font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
               Temperature
             </h6>
-            <span class="text-xl font-semibold">0</span>
+            <span class="text-md font-semibold">0</span>
           </div>
           <div>
             <span class="fa fa-list-alt w-11 h-11 text-gray-300 dark:text-primary-dark"></span>
@@ -33,7 +33,7 @@
         <!-- Orders card -->
         <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
           <div>
-            <h6 class="text-xl font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+            <h6 class="text-md font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
               Soil_moisture
             </h6>
             <span class="text-xl font-semibold">0</span>
@@ -46,7 +46,7 @@
         <!-- Tickets card -->
         <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
           <div>
-            <h6 class="text-xl font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
+            <h6 class="text-md font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light">
               Conductivity
             </h6>
             <!-- <span class="text-xl font-semibold" v-if="totalJobPositions.length > 0">{{ totalJobPositions }}</span> -->
