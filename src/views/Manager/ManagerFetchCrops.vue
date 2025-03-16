@@ -42,7 +42,7 @@
                             <td class="px-4 py-2 border">{{ row.P }}</td>
                             <td class="px-4 py-2 border">{{ row.K }}</td>
                             <td class="px-4 py-2 border">{{ row.temperature }}</td>
-                            <td class="px-4 py-2 border">{{ row.ph }}</td>
+                            <td class="px-4 py-2 border">{{ row.pH }}</td>
                             <td class="px-4 py-2 border">{{ row.soil_moisture }}</td>
                             <td class="px-4 py-2 border">{{ row.conductivity }}</td>
                             <td class="px-4 py-2 border">{{ row.label }}</td>
@@ -108,7 +108,7 @@
               row.N.toString().includes(query) ||
               row.P.toString().includes(query) ||
               row.K.toString().includes(query) ||
-              row.ph.toString().includes(query) ||
+              row.pH.toString().includes(query) ||
               row.label.toLowerCase().includes(query) ||
               row.conductivity.toString().includes(query) ||
               row.temperature.toString().includes(query) ||
