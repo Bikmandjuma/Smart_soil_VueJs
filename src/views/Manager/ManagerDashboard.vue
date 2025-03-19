@@ -62,7 +62,7 @@
 
       <div class="w-full xl:w-2/2 mb-4">
       <div class="card border rounded-lg shadow-md">
-        <div class="card-body pt-3 text-center">
+        <div class="card-body pt-3 text-center"  style="overflow-x: scroll;">
           <h3 v-if="isLoading" class="text-blue-600 font-bold">Loading...</h3>
 
           <template v-if="!isLoading">
