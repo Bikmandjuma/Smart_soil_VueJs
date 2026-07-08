@@ -10,7 +10,9 @@
                       <div class="row align-items-center">
                           <div class="col-lg-12">
                               <div class="section-header text-center" style="margin-top: -20px;">
-                                  <p id="ad_title" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">About System</p>
+                                  <p id="ad_title" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">
+                                      About System
+                                  </p>
                               </div>
                           </div>
                       </div>
@@ -23,83 +25,160 @@
                               </div>
   
                           </div>
+
                           <div class="col-lg-6">
                              
                               <div class="flex-1 h-full max-w-4xl p-3 mx-auto bg-white rounded-lg shadow-xl dark:bg-gray-800 pb-2" style="max-height: 600px;overflow:scroll;">
                                   
-                                  <h4>IoT and AI-Driven Crop Recommendation System</h4>
+                                  <h4>IoT and Machine Learning-Based Crop Recommendation System</h4>
     
-                                    <p>Agriculture is a critical sector that requires innovative solutions to overcome challenges such as unpredictable weather patterns, inefficient resource management, and poor crop selection. This project introduces an IoT and AI-Driven Crop Recommendation System, designed to assist farmers in making data-driven decisions to enhance productivity, sustainability, and economic viability.</p>
+                                  <p>
+                                  Agriculture plays an important role in Rwanda's economic development and food security. 
+                                  However, farmers face challenges such as unpredictable climate conditions, poor crop selection,
+                                  limited access to agricultural information, and inefficient resource utilization. 
+                                  This project introduces an IoT and Machine Learning-Based Crop Recommendation System designed 
+                                  to support farmers in Kayonza District by providing accurate crop recommendations based on soil 
+                                  and environmental conditions.
+                                  </p>
+
                                     <br>
+
                                     <h4>Key Features</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li><strong>Real-time Data Collection:</strong> IoT-enabled sensors monitor environmental factors like soil moisture, temperature, humidity, and pH levels.</li>
-                                        <li><strong>Cloud-Based Data Processing:</strong> Secure storage and processing of real-time and historical data to ensure accessibility and efficient analysis.</li>
-                                        <li><strong>AI-Powered Crop Recommendation:</strong> Machine learning models analyze collected data and provide optimal crop suggestions tailored to specific soil and climate conditions.</li>
-                                        <li><strong>User-Friendly Interface:</strong> Mobile and web applications provide intuitive dashboards displaying actionable insights.</li>
-                                        <li><strong>Predictive Analysis:</strong> AI algorithms forecast weather trends and potential agricultural risks.</li>
-                                        <li><strong>Sustainability & Resource Optimization:</strong> Reduces water wastage, promotes eco-friendly practices, and minimizes financial losses.</li>
+                                        <li><strong>IoT-Based Data Collection:</strong> Sensors collect real-time information including soil moisture, temperature, humidity, and soil pH levels.</li>
+
+                                        <li><strong>Machine Learning Crop Prediction:</strong> Machine learning algorithms analyze agricultural data and recommend suitable crops for specific farming conditions.</li>
+
+                                        <li><strong>Agricultural Data Management:</strong> The system stores and manages collected data for analysis, monitoring, and future prediction.</li>
+
+                                        <li><strong>Farmer Decision Support:</strong> Provides farmers with reliable recommendations through a simple and interactive user interface.</li>
+
+                                        <li><strong>Environmental Monitoring:</strong> Continuously monitors soil and environmental conditions to improve farming decisions.</li>
+
+                                        <li><strong>Sustainable Farming:</strong> Helps optimize agricultural resources and promotes environmentally friendly farming practices.</li>
                                     </ul>
+
                                     <br>
+
                                     <h4>How It Works</h4>
+
                                     <ol style="list-style-type:square;">
-                                        <li><strong>Data Collection:</strong> IoT sensors placed in agricultural fields gather data on soil health and environmental conditions.</li>
-                                        <li><strong>Data Transmission:</strong> The collected data is sent to a cloud platform via wireless communication protocols.</li>
-                                        <li><strong>AI Analysis:</strong> Machine learning models process the data, comparing it with historical records and market trends to generate crop recommendations.</li>
-                                        <li><strong>Decision Support:</strong> Farmers receive real-time insights through an interactive web or mobile interface, helping them make informed decisions.</li>
+
+                                        <li>
+                                        <strong>Data Collection:</strong>
+                                        IoT sensors installed in farms collect information about soil properties and environmental conditions.
+                                        </li>
+
+                                        <li>
+                                        <strong>Data Processing:</strong>
+                                        The collected data is transmitted and processed for machine learning analysis.
+                                        </li>
+
+                                        <li>
+                                        <strong>Machine Learning Analysis:</strong>
+                                        Algorithms analyze historical and real-time agricultural data to identify suitable crops.
+                                        </li>
+
+                                        <li>
+                                        <strong>Crop Recommendation:</strong>
+                                        Farmers receive recommended crops through the web-based system interface.
+                                        </li>
+
                                     </ol>
+
                                     <br>
+
                                     <h4>Why Choose This System?</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li><strong>Enhanced Precision Farming:</strong> Data-driven decision-making ensures better yields and efficient resource usage.</li>
-                                        <li><strong>Adaptation to Climate Change:</strong> AI-powered recommendations help mitigate risks associated with unpredictable weather patterns.</li>
-                                        <li><strong>Economic Growth:</strong> Increases profitability by suggesting the most viable crops based on market demand.</li>
-                                        <li><strong>Government Policy Alignment:</strong> Supports Rwanda’s Vision 2050 for agricultural modernization.</li>
+
+                                        <li><strong>Improved Crop Selection:</strong> Helps farmers select crops based on scientific data instead of traditional assumptions.</li>
+
+                                        <li><strong>Increased Productivity:</strong> Supports better crop yields through accurate recommendations.</li>
+
+                                        <li><strong>Climate Adaptation:</strong> Helps farmers respond to changing weather and environmental conditions.</li>
+
+                                        <li><strong>Resource Optimization:</strong> Reduces unnecessary use of water, fertilizers, and farming resources.</li>
+
+                                        <li><strong>Agricultural Modernization:</strong> Supports Rwanda's vision of technology-driven sustainable agriculture.</li>
+
                                     </ul>
+
                                     <br>
+
                                     <h4>Target Users</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li>Smallholder and large-scale farmers</li>
-                                        <li>Agricultural policymakers and government institutions (e.g., MINAGRI Rwanda)</li>
-                                        <li>Research institutions focused on agricultural innovation</li>
+                                        <li>Smallholder farmers in Kayonza District</li>
+                                        <li>Large-scale agricultural farmers</li>
+                                        <li>Agricultural extension officers</li>
+                                        <li>Government agricultural institutions such as MINAGRI Rwanda</li>
+                                        <li>Agricultural researchers and organizations</li>
                                     </ul>
+
                                     <br>
+
                                     <h4>Technical Aspects</h4>
+
                                     <h7>IoT Sensors Used:</h7>
+
                                     <ul style="list-style-type:square;">
                                         <li>Soil moisture sensors</li>
-                                        <li>Temperature and humidity sensors</li>
-                                        <li>pH level sensors</li>
+                                        <li>Temperature sensors</li>
+                                        <li>Humidity sensors</li>
+                                        <li>Soil pH sensors</li>
                                     </ul>
+
                                     <br>
-                                    <h4>AI Models Implemented:</h4>
+
+                                    <h4>Machine Learning Models Implemented:</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li>Decision Trees</li>
+                                        <li>Decision Tree</li>
                                         <li>Random Forest</li>
-                                        <li>Support Vector Machines (SVM)</li>
+                                        <li>Support Vector Machine (SVM)</li>
+                                        <li>Logistic Regression</li>
                                     </ul>
+
                                     <br>
-                                    <h4>Cloud Technologies:</h4>
+
+                                    <h4>Data Processing Technologies:</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li>AWS/Azure/Google Cloud for data storage</li>
-                                        <li>Firebase for real-time database management</li>
+                                        <li>Python for machine learning development</li>
+                                        <li>Pandas and NumPy for data preprocessing</li>
+                                        <li>Scikit-learn for model training and prediction</li>
+                                        <li>Database system for agricultural data storage</li>
                                     </ul>
+
                                     <br>
+
                                     <h4>User Interface:</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li>Web-based dashboard (VueJS , flask and Laravel)</li>
-                                        <li>Mobile application (Android/iOS)</li>
+                                        <li>Web-based dashboard developed using VueJS</li>
+                                        <li>Backend services using Flask/Laravel</li>
+                                        <li>Mobile application support for farmers</li>
                                     </ul>
+
                                     <br>
+
                                     <h4>Expected Impact</h4>
+
                                     <ul style="list-style-type:square;">
-                                        <li>Improved agricultural productivity and food security.</li>
-                                        <li>Reduction of farming costs by optimizing resource allocation.</li>
-                                        <li>Increased farmer incomes through better crop choices.</li>
-                                        <li>Promotion of sustainable farming practices in Rwanda and beyond.</li>
+                                        <li>Improved agricultural productivity in Kayonza District.</li>
+                                        <li>Reduced farming losses caused by poor crop selection.</li>
+                                        <li>Better utilization of agricultural resources.</li>
+                                        <li>Improved farmer decision-making through technology.</li>
+                                        <li>Promotion of sustainable agriculture practices in Rwanda.</li>
                                     </ul>
+
                                     <br>
-                                  <p class="text-center items-center justify-center">---- End ----</p>
+
+                                  <p class="text-center items-center justify-center">
+                                      ---- End ----
+                                  </p>
   
                               </div>
                           </div>
@@ -109,47 +188,4 @@
           </section>
   
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'HomeView',
-    data(){
-      return {
-         
-      }
-    },
-  };
-  </script>
-  
-  <style scoped>
-  h4, h6 {
-    font-family: sa;
-    font-weight: bold;
-    /* Other styles */
-  }
-  
-      /* #ad_title{
-          color: #E81C2E;
-          font-size:20px;
-          font-weight: bold;
-      } */
-  
-      #ad_title {
-        position: relative;
-        display: inline-block;
-      }
-  
-      #ad_title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 2px;
-        background-color: black;
-      }
-
-  </style>
-  
+</template>
