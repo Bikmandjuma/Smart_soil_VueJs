@@ -51,7 +51,7 @@
                 </div>
                 <div class="flex justify-between">
                   <span class="font-medium">Birthdate</span>
-                  <span>{{ formatDate(userData.birthdate) || 'loading...' }}</span>
+                  <span>{{ formatDate(userData.birthdate) }}</span>
                 </div>
                 <!-- Age Field -->
                 <div class="flex justify-between">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="flex justify-between">
                   <span class="font-medium">Joined</span>
-                  <span>{{ getDaysAgo(userData.created_at) || 'loading...' }}</span>
+                  <span>{{ getDaysAgo(userData.created_at) }}</span>
                 </div>
                 <div class="my-4 border-t border-gray-300"></div>
                 <div class="flex items-center justify-between px-2 py-2 border-b lg:py-6 dark:border-primary-darker">
@@ -100,7 +100,6 @@ export default {
     return {
       userData: {
         user_code: '',
-        user_name: '',
         firstname: '',
         lastname: '',
         gender: '',
@@ -116,6 +115,7 @@ export default {
     age() {
       if (!this.userData.birthdate) return null;
       const birthDate = dayjs(this.userData.birthdate);
+      if (!birthDate.isValid()) return null;
       const today = dayjs();
       return today.diff(birthDate, 'year') + " years old"; // Calculate the age in years
     }
@@ -129,10 +129,10 @@ export default {
     }
   },
   methods: {
-    
+
     fetchUserData(token) {
       axios
-        .get(`${laravelApiUrl}/user/view_info`, {
+        .get(`${laravelApiUrl}/user/view-user-info`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -153,13 +153,15 @@ export default {
     },
     formatDate(dateString) {
       if (!dateString) return 'loading...';
-      return new Date(dateString).toLocaleDateString();
+      const parsed = new Date(dateString);
+      if (isNaN(parsed.getTime())) return 'loading...';
+      return parsed.toLocaleDateString();
     },
     getDaysAgo(date) {
-      if (!dayjs(date).isValid()) return 'loading...';
+      if (!date || !dayjs(date).isValid()) return 'loading...';
       return dayjs(date).fromNow(); // Display days ago since the user joined
     },
-  
+
   }
 };
 </script>

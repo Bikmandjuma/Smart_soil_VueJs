@@ -1,54 +1,69 @@
 <template>
-  <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900" id="login_container">
-    <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
-      <div class="flex flex-col overflow-y-auto md:flex-row">
-        <div class="h-32 md:h-auto md:w-1/2">
-          <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" src="../../assets/Homepage_images/login-office.jpeg" alt="Office" />
-          <img aria-hidden="true" class="hidden object-cover w-full h-full dark:block" src="../../assets/Homepage_images/login-office-dark.jpeg" alt="Office" />
-        </div>
-        <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
-          <div class="w-full">
-            <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200 text-center justify-center items-center">Login</h1>
+  <div class="login soil-signal" id="login_container">
+    <div class="login__card">
 
-            <!-- Error Message -->
-            <div v-if="errorMessage" class="p-2 mb-4 text-sm text-red-700 bg-red-100 rounded-lg text-center justify-center items-center" role="alert">
-              <i class="fa fa-exclamation-circle"></i> {{ errorMessage }}
+      <!-- Brand panel (left) -->
+      <div class="login__brand" aria-hidden="true">
+        <div class="login__field"></div>
+        <img
+          src="../../assets/Homepage_images/create-account-office.jpeg"
+          alt="Soil sensor in the field"
+          class="login__brand-img"
+        />
+      </div>
+
+      <!-- Form panel (right) -->
+      <div class="login__form">
+        <div class="login__form-inner">
+          <span class="form__eyebrow">ACCESS</span>
+          <h2 class="form__title">Welcome back</h2>
+          <p class="form__sub">Sign in to view your field data and recommendations.</p>
+
+          <!-- Error Message -->
+          <div v-if="errorMessage" class="alert" role="alert">
+            <i class="fa fa-exclamation-circle"></i> {{ errorMessage }}
+          </div>
+
+          <form @submit.prevent="handleLogin" class="fields">
+            <div class="field">
+              <label for="emailOrPhone">Email or phone</label>
+              <input
+                v-model="emailOrPhone"
+                id="emailOrPhone"
+                type="text"
+                placeholder="Enter your email or phone"
+                class="field__input"
+              />
             </div>
 
-            <form @submit.prevent="handleLogin">
-              <div class="mb-4">
-                <label for="emailOrPhone" class="block text-sm font-medium text-gray-700">Email or Phone</label>
-                <input v-model="emailOrPhone" id="emailOrPhone" type="text" placeholder="Enter your email or phone"
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
-              </div>
-              <div class="mb-6">
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                <input v-model="password" id="password" type="password" placeholder="Enter your password"
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
-              </div>
-
-              <!-- Loading Button or Login Button -->
-              <button v-if="loading" type="submit" class="w-full px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:outline-none">
-                <i class="fa fa-spinner fa-spin"></i>&nbsp;Logging . . .
-              </button>
-
-              <button v-else type="submit" class="w-full px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:outline-none">
-                <i class="fa fa-lock-open"></i>&nbsp;Login
-              </button>
-            </form>
-
-            <hr class="my-8" />
-            <div id="forgot_pswd">
-              <p class="mt-4">
-                <router-link class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" to="/forgot_password">
-                  <i class="fa fa-key"></i>&nbsp;Forgot your password?
-                </router-link>
-              </p>
-             
+            <div class="field">
+              <label for="password">Password</label>
+              <input
+                v-model="password"
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                class="field__input"
+              />
             </div>
+
+            <button v-if="loading" type="submit" class="btn btn--primary btn--block" disabled>
+              <i class="fa fa-spinner fa-spin"></i>&nbsp;Logging in…
+            </button>
+
+            <button v-else type="submit" class="btn btn--primary btn--block">
+              <i class="fa fa-lock-open"></i>&nbsp;Login
+            </button>
+          </form>
+
+          <div class="login__foot">
+            <router-link class="link" to="/forgot_password">
+              <i class="fa fa-key"></i>&nbsp;Forgot your password?
+            </router-link>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -148,30 +163,184 @@ export default {
 </script>
 
 <style scoped>
-#login_container{
-  margin-top: -40px;
-}
-#forgot_pswd {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+.soil-signal{
+  --soil-950:#0F1B16;
+  --soil-900:#14231C;
+  --soil-800:#1D3128;
+  --soil-700:#2A4438;
+  --chlorophyll:#6FCF97;
+  --harvest:#E3A857;
+  --sensor-blue:#4FB0C6;
+  --clay-red:#D96C5A;
+  --paper:#EFEAE0;
+  --paper-dim:#9CA99E;
+
+  --font-display:'Fraunces', serif;
+  --font-mono:'IBM Plex Mono', monospace;
+  --font-body:'Inter', sans-serif;
 }
 
-a {
-  text-decoration: none;
+/* ---------- Layout ---------- */
+#login_container{ margin-top: 0; }
+
+.login{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  background:var(--paper);
+  font-family:var(--font-body);
 }
 
-#forgot_pswd a:hover {
-  text-decoration: none;
-  color: black;
+.login__card{
+  width:100%;
+  max-width:920px;
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 40px 80px -30px rgba(15,27,22,0.35);
+  background:#fff;
 }
 
-#forgot_pswd {
-  align-items: center;
-  text-align: center;
+/* ---------- Brand side ---------- */
+.login__brand{
+  position:relative;
+  background:var(--soil-900);
+  overflow:hidden;
+  min-height:280px;
+}
+.login__brand-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.login__field{
+  position:absolute; inset:0; z-index:1;
+  background:
+    linear-gradient(200deg, rgba(15,27,22,0.15) 0%, rgba(15,27,22,0.6) 100%),
+    radial-gradient(65% 55% at 85% 10%, rgba(111,207,151,0.18), transparent 70%);
+  pointer-events:none;
 }
 
-@media (max-width: 600px) {
-  #login_container{
-    margin-top: -70px;
-  }
+/* ---------- Form side ---------- */
+.login__form{
+  display:flex;
+  align-items:center;
+  padding:48px 44px;
+}
+.login__form-inner{ width:100%; }
+
+.form__eyebrow{
+  display:block;
+  font-family:var(--font-mono);
+  font-size:0.68rem; letter-spacing:0.12em;
+  color:var(--sensor-blue);
+  margin-bottom:10px;
+}
+.form__title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.6rem;
+  color:var(--soil-950);
+  margin:0 0 8px;
+}
+.form__sub{
+  font-size:0.9rem;
+  color:var(--soil-700);
+  margin:0 0 26px;
+}
+
+.alert{
+  display:flex; align-items:center; gap:8px;
+  background:rgba(217,108,90,0.1);
+  color:var(--clay-red);
+  border:1px solid rgba(217,108,90,0.25);
+  font-size:0.85rem;
+  padding:10px 14px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.fields{ display:flex; flex-direction:column; gap:18px; }
+.field label{
+  display:block;
+  font-size:0.8rem;
+  font-weight:600;
+  color:var(--soil-800);
+  margin-bottom:6px;
+}
+.field__input{
+  width:100%;
+  font-family:var(--font-body);
+  font-size:0.92rem;
+  padding:11px 14px;
+  border-radius:8px;
+  border:1px solid rgba(15,27,22,0.16);
+  background:var(--paper);
+  color:var(--soil-950);
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+.field__input::placeholder{ color:var(--paper-dim); }
+.field__input:focus{
+  outline:none;
+  border-color:var(--chlorophyll);
+  box-shadow:0 0 0 3px rgba(111,207,151,0.18);
+}
+
+.btn{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:0.92rem;
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.btn--block{ width:100%; margin-top:6px; }
+.btn--primary{
+  background:var(--chlorophyll);
+  color:var(--soil-950);
+}
+.btn--primary:hover{ transform:translateY(-1px); box-shadow:0 10px 22px rgba(111,207,151,0.25); }
+.btn--primary:disabled{ opacity:0.75; cursor:progress; transform:none; box-shadow:none; }
+
+.login__foot{
+  margin-top:26px;
+  padding-top:20px;
+  border-top:1px solid rgba(15,27,22,0.08);
+  text-align:center;
+}
+.link{
+  font-size:0.85rem;
+  font-weight:600;
+  color:var(--sensor-blue);
+  text-decoration:none;
+}
+.link:hover{ text-decoration:underline; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px){
+  .login__card{ grid-template-columns:1fr; }
+  .login__brand{ min-height:180px; }
+  .login__form{ padding:36px 28px; }
+}
+
+/* ---------- Accessibility ---------- */
+.field__input:focus-visible,
+.btn:focus-visible,
+.link:focus-visible{
+  outline:2px solid var(--chlorophyll);
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion: reduce){
+  .mini-panel__pulse{ animation:none; }
+  .btn{ transition:none; }
 }
 </style>

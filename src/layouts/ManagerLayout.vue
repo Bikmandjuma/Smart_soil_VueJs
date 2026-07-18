@@ -71,7 +71,7 @@
               height="40"
             /> -->
           
-            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">IoT and AI-Driven CRS</router-link>
+            &nbsp;&nbsp;<router-link to="#" class="inline-block mt-1 text-2xl font-bold tracking-wider bg-gradient-to-b from-green-900 to-gray-800 bg-clip-text text-transparent" style="font-family: sa;">IoT and Machine Learning-Based Crop Recommendation System</router-link>
           </div>
           <!-- <div>
             <form action="#">
@@ -213,7 +213,8 @@ export default {
         pricing: false,
       },
       userData: {
-        user_name: '',
+        firstname: '',
+        lastname: '',
         image: ''
       }
     };
@@ -223,16 +224,17 @@ export default {
       return this.$route.meta.pageTitle || "defult pageTitle"
     },
     truncatedUserName() {
-      if (!this.userData.user_name) return '.....';
-      return this.userData.user_name.length > 20 
-        ? this.userData.user_name.substring(0, 20) + '...' 
-        : this.userData.user_name;
+      const fullName = `${this.userData.firstname || ''} ${this.userData.lastname || ''}`.trim();
+      if (!fullName) return '.....';
+      return fullName.length > 20
+        ? fullName.substring(0, 20) + '...'
+        : fullName;
     }
   },
   methods: {
     fetchUserData(token) {
       axios
-        .get(`${laravelApiUrl}/user/view_info`, {
+        .get(`${laravelApiUrl}/user/view-user-info`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -319,7 +321,7 @@ export default {
   mounted(){
     const token = localStorage.getItem('auth_token');
     if (!token) {
-      this.$router.push({name:'/login'});
+      this.$router.push({ name: 'Login' });
     }else{
       this.fetchUserData(token);
     }
@@ -425,50 +427,49 @@ label{
   transition: all 1s ease;
   border-radius: 0;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  &::after{
-    content: '';
-    display: block;
-    height: 2px;
-    width: 80%;
-    background-color: #F0AD4E;
-    transition: all 1s ease 0.5s;
-  }
-  input{
-    transition: width 1s ease, opacity 0.5s ease 0.5s;
-    opacity: 1;
-    width: 250px;
-    height: 25px;
-    border: 0;
-    outline: none;
-    color: darken(#F0AD4E, 25)
-  }
-  i{
-    position: absolute;
-    top: 11px;
-    right: 11px;
-    color: #333;
-    cursor: pointer;
-  }
-  &[data-state="close"]{
-    border-radius: 30px;
-    padding: 5px 5px;
-     transition: all 1s ease;
-    &::after{
-      width: 0%;
-      transition: all 0.3s ease;
-    }
-    i{
-      pointer-events: none;
-    }
-    input{
-      width: 28px;
-      height: 25px;
-      opacity:0;
-      cursor: pointer;
-      transition: opacity 0.5s ease, width 1s ease;
-      -webkit-appearance:none
-    } 
-  }
+}
+label::after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: #F0AD4E;
+  transition: all 1s ease 0.5s;
+}
+label input{
+  transition: width 1s ease, opacity 0.5s ease 0.5s;
+  opacity: 1;
+  width: 250px;
+  height: 25px;
+  border: 0;
+  outline: none;
+}
+label i{
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  color: #333;
+  cursor: pointer;
+}
+label[data-state="close"]{
+  border-radius: 30px;
+  padding: 5px 5px;
+  transition: all 1s ease;
+}
+label[data-state="close"]::after{
+  width: 0%;
+  transition: all 0.3s ease;
+}
+label[data-state="close"] i{
+  pointer-events: none;
+}
+label[data-state="close"] input{
+  width: 28px;
+  height: 25px;
+  opacity:0;
+  cursor: pointer;
+  transition: opacity 0.5s ease, width 1s ease;
+  -webkit-appearance:none;
 }
 
 </style>
